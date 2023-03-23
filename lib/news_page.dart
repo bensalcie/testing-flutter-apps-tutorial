@@ -22,6 +22,7 @@ class _NewsPageState extends State<NewsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: const Key('key-scaffold'),
       appBar: AppBar(
         title: const Text('News'),
       ),
@@ -35,6 +36,7 @@ class _NewsPageState extends State<NewsPage> {
             );
           }
           return ListView.builder(
+            key: const Key('list-widget'),
             itemCount: notifier.articles.length,
             itemBuilder: (_, index) {
               final article = notifier.articles[index];
